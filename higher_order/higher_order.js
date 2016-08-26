@@ -3,11 +3,22 @@ var loop = function(collection, callback) {
     for (var i = 0; i < collection.length; i++) {
       callback(collection[i], i);
     }
-  }
 };
 
-// write your talkToUser function here:
 
+// write your talkToUser function here:
+prompt = "Talk to me!"
+var talkToUser = function(array,prompType){
+	loop(array,function(prompt){
+		if(prompType==='log'){
+			console.log(funFacts)
+		}if(prompType==='alert'){
+			alert('your door is ajar')
+		}if(prompType==='prompt'){
+			prompt('this is a prompt, duh')
+		}
+	})
+}
 
 // Use this to test your talkToUser function:
 
@@ -22,3 +33,9 @@ var funFacts = [
 "Jupiter is the fastest spinning planet in our Solar System rotating on average once in just under 10 hours. "
 
 ];
+
+talkToUser(funFacts,"alert");
+
+
+//I tried to during the mid-term to keep it moving and not get stuck on one thing for too long.
+//That was a goal of mine this time through.
